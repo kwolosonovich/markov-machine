@@ -32,7 +32,6 @@ class MarkovMachine {
     }
 
     this.chains = chains;
-    // console.log(chains)
   }
 
   /** return random text from chains */
@@ -43,14 +42,20 @@ class MarkovMachine {
   };
 
   makeText(numWords = 100) {
-    // TODO
+    let keys = (Object.keys(this.chains));
+    let key = this.random(keys)
+    let text = []
 
+    while (text.length < numWords && key !== null) {
+      text.push(key);
+      key = mm.random(Object.keys(this.chains));
+    }
+    console.log(text.join(" "))
+    return text.join(" ");
   }
 }
 
 let mm = new MarkovMachine("the cat in the hat");
 
 mm.makeText();
-
-// mm.random([1, 3, 5])
 
