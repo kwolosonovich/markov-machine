@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kwolosonovich/markov-machine#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "node": "^14.8.0"
   }
 }
