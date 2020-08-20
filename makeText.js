@@ -42,8 +42,12 @@ const checkType = (method) => {
     readFromFile();
   } else {
     console.error(`Unknown method: ${process.argv[2]}`)
-    process.exit(1);
   }
 };
 
 checkType(method)
+
+
+module.exports = { readFromFile, 
+getFromUrl, 
+checkType };

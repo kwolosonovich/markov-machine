@@ -2,9 +2,6 @@ const { timeStamp } = require("console")
 const { MarkovMachine } = require("./markov")
 
 describe("class MarkovMachine", () => {
-  // beforeEach(() => {
-  //   mm = new MarkovMachine("the cat in");
-  // });
 
   test("make chains", () => {
     let mm = new MarkovMachine("the cat in");
@@ -14,6 +11,7 @@ describe("class MarkovMachine", () => {
       cat: ["in"],
       in: [null],
     });
+    expect(mm.chains.length).toEqual()
   });
 
   test('get random', () => {

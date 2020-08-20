@@ -37,7 +37,6 @@ class MarkovMachine {
 
   random = (arr) => {
     let randomKey = arr[Math.floor(Math.random() * arr.length)];
-    // console.log(typeof(randomKey))
     return randomKey;
   };
 
@@ -50,15 +49,12 @@ class MarkovMachine {
       text.push(key);
       key = mm.random(Object.keys(this.chains));
     }
-    // console.log(text.join(" "))
     return text.join(" ");
   }
 }
 
 let mm = new MarkovMachine("the cat in the hat");
 
-
-// mm.makeChains();
 mm.makeText();
 
 module.exports = { MarkovMachine };
