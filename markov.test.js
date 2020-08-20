@@ -21,13 +21,18 @@ describe("class MarkovMachine", () => {
   test('get random', () => {
     // mm = new MarkovMachine("the cat in");
 
-    // const expected = ['the', 'cat']
-
-    expect(["the", "cat"]).toContain(MarkovMachine.random(["the", "cat"])); 
+    // mm == MarkovMachine();
+     mm == new MarkovMachine();
+    expect("the cat").toContain(MarkovMachine.random(["cat"])); 
        
   });
 
   // test('')
+
+  // test('make text', () => {
+  //       // mm = new MarkovMachine("the cat in");
+
+  // })
 
 });
 
