@@ -9,6 +9,7 @@ class MarkovMachine {
   constructor(text) {
     let words = text.split(/[ \r\n]+/);
     this.words = words.filter((c) => c !== "");
+    // console.log(this.words)
     this.makeChains();
   }
 
@@ -30,15 +31,15 @@ class MarkovMachine {
         chains[word] = nextWord;
       }
     }
-
     this.chains = chains;
   }
 
   /** return random text from chains */
 
   random = (arr) => {
-    // console.log(arr)
-    return(arr[Math.floor(Math.random() * arr.length)]);
+    let randomKey = arr[Math.floor(Math.random() * arr.length)];
+    // console.log(typeof(randomKey))
+    return randomKey;
   };
 
   makeText(numWords = 100) {
@@ -50,12 +51,15 @@ class MarkovMachine {
       text.push(key);
       key = mm.random(Object.keys(this.chains));
     }
-    console.log(text.join(" "))
+    // console.log(text.join(" "))
     return text.join(" ");
   }
 }
 
 let mm = new MarkovMachine("the cat in the hat");
 
+
+// mm.makeChains();
 mm.makeText();
 
+module.exports = { MarkovMachine };
