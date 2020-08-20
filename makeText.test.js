@@ -3,30 +3,7 @@ const { getFromUrl } = require("./makeText");
 const { getFromFile } = require("./makeText");
 const { MarkovMachine } = require("./markov");
 
-// describe('make text', () => {
-
-// test get from URL
-    // test('getFromUrl', () => {
-    //     expect.hasAssertions()
-    //     prepareState(state => {
-    //         expect(validateState()).toBeTruthy()
-    //     })
-    //     return waitOnState
-    // })
-
-    // test('getFromUrl', () => {
-    //     // let res;
-    //     expect.assertions()
-    //     getFromUrl = (data) => {
-    //         axios.get(data);
-    //         expect(data).toBeTruthy();
-    //     }
-    //     res = await axios.get(data);
-    // })
-
-    // test('getFromUrl', () => {
-    //    res = await axios.get(path);
-    //     expect(axios.get(path)).toHaveReturned(res);
+describe('make text', () => {
 
 
 // test get from file   
@@ -50,4 +27,4 @@ const { MarkovMachine } = require("./markov");
         expect(path).toBeTruthy;
     });
 
-// })
+})
